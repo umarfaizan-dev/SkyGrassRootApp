@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    String [] skyLetter = {"d","h","l","k","t","b","f"};
+    String [] skyLetter = {"f", "d","h","l","k","t","b"};
     String [] grassLetter = {"a","c","e","i","m","n","o","r","s","u","v","w","x","z"};
     String [] rootLetter = {"g","j","p","q","y"};
     Button btnSky, btnRoot, btnGrass;
