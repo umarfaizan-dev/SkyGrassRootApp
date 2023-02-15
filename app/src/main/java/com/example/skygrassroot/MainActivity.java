@@ -2,6 +2,8 @@ package com.example.skygrassroot;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,12 +15,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     String [] skyLetter = {"f", "d","h","l","k","t","b"};
     String [] grassLetter = {"a","c","e","i","m","n","o","r","s","u","v","w","x","z"};
     String [] rootLetter = {"g","j","p","q","y"};
-    Button btnSky, btnRoot, btnGrass;
+    Button btnSky, btnRoot, btnGrass, gitButton;
     TextView textView, textViewAnswer, textViewGrassInfo, TextViewRootInfo, TextViewSkyInfo;
     int category = 0, index=0, grassCorrectCount=0, grassWrongCount=0, skyCorrectCount=0, skyWrongCount=0, rootCorrectCount=0, rootWrongCount=0;
     String answer = "";
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +36,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textViewGrassInfo = findViewById(R.id.textViewResultGrass);
         TextViewRootInfo = findViewById(R.id.textViewResultRoot);
         TextViewSkyInfo = findViewById(R.id.textViewResultSky);
+        gitButton = findViewById(R.id.gitButton);
 
         GenerateLetter();
+
+        gitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final String url = "https://github.com/umarfaizan-dev/SkyGrassRootApp/commits/main";
+                Uri webpage = Uri.parse(url);
+
+                Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+                startActivity(intent);
+            }
+        });
 
     }
 
