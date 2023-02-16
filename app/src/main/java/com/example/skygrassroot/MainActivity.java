@@ -14,7 +14,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     String [] skyLetter = {"f", "d","h","l","k","t","b"};
     String [] grassLetter = {"a","c","e","i","m","n","o","r","s","u","v","w","x","z"};
-    String [] rootLetter = {"g","j","p","q","y"};
+    String [] rootLetter = {"q","y", "g","j","p"};
     Button btnSky, btnRoot, btnGrass, gitButton;
     TextView textView, textViewAnswer, textViewGrassInfo, TextViewRootInfo, TextViewSkyInfo;
     int category = 0, index=0, grassCorrectCount=0, grassWrongCount=0, skyCorrectCount=0, skyWrongCount=0, rootCorrectCount=0, rootWrongCount=0;
